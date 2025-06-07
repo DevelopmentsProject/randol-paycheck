@@ -100,17 +100,3 @@ function PaycheckInterval()
     end
     SetTimeout(QBCore.Config.Money.PayCheckTimeOut * (60 * 1000), PaycheckInterval)
 end
-
-# Export
-
-The export below can be used to insert money into the paycheck rather than adding it into a player's bank/cash. You must implement these yourself.
-
-Example: QBCore
-
-```lua
-local Player = QBCore.Functions.GetPlayer(source)
-local amount = 450
-exports.randol_paycheck:AddToPaycheck(Player.PlayerData.citizenid, amount)
-```
-exports.randol_paycheck:AddToPaycheck(xPlayer.identifier, amount)
-```
