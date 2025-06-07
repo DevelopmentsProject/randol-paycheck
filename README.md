@@ -112,11 +112,5 @@ local Player = QBCore.Functions.GetPlayer(source)
 local amount = 450
 exports.randol_paycheck:AddToPaycheck(Player.PlayerData.citizenid, amount)
 ```
-
-Example: ESX
-
-```lua
-local xPlayer = ESX.GetPlayerFromId(source)
-local amount = 450
 exports.randol_paycheck:AddToPaycheck(xPlayer.identifier, amount)
 ```
