@@ -1,5 +1,32 @@
--- Edit by ZERX
+📦 Paycheck Script Update: ox_lib ➝ qb-menu + interact
+This update replaces ox_lib's context menus and targeting system with qb-menu and a custom exports.interact handler. Below are the key changes:
 
+🔁 Replaced ox_lib with qb-menu
+Removed all usage of lib.registerContext() and lib.showContext() (ox_lib context menu).
+
+Now uses qb-menu to show pay check menu
+
+qb-menu is opened using exports['qb-menu']:openMenu({ ... }).
+
+🎯 Targeting/Interaction Change
+Removed ox_target and qb-target support.
+
+Now uses a unified exports.interact:AddInteraction() system.
+
+This system allows defining a location, interaction range, and multiple menu options (like "Collect Paycheck").
+
+If you don't have the same map you can change the Vector3 cords in the cl_paycheck.lua 
+
+Hope you guys enjoy
+
+dependencies:
+    'qb-core',
+    'oxmysql',
+    'ox_lib',
+    'qb-menu',
+    'qb-input',
+    'progressbar', 
+    'interact'
 
 # QBCore Install.
 
